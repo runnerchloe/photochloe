@@ -1,0 +1,241 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border don't affect layout */
+}
+
+body {
+  font-family: 'Anton', sans-serif; /* Changed to Anton font */
+  background-color: #f0f8ff; /* Soft blue background */
+  color: #333;
+  margin: 0;
+  padding: 0; /* Ensure no extra padding */
+}
+
+/* Funky header font */
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.6rem;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-left: 30px; /* Space between the image and the title */
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;  /* Aligns both the image and text vertically */
+  justify-content: space-between; /* This moves the nav to the far right */
+}
+
+header .profile-photo {
+  width: 50px; /* Size of the profile image */
+  height: 50px;
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden;
+  border: 3px solid white; /* White frame around the image */
+}
+
+header .profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+/* Header Title (H1) */
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-left: 15px; /* Space between the image and the title */
+  flex-grow: 1; /* Allows the title to take up available space */
+  text-align: left; /* Keeps the title aligned to the left */
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Aligns the navigation to the far right */
+  padding: 0;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;  /* Ensure the links are white */
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #cce6ff;  /* A subtle hover color change for better interaction */
+  text-decoration: underline;  /* Add underline effect on hover */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url('images/AmeliaMazza.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  height: 600px; /* Adjust the height based on your preference */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin: 0; /* Remove any margin causing unwanted space */
+  padding: 0; /* Remove any padding */
+}
+
+/* Overlay in the Hero Section */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-end;  /* Center vertically at the bottom */
+  height: 100%; /* Ensure it stretches across the height of the hero section */
+  padding-bottom: 10px; /* Adds space between the text and the bottom edge */
+  color: white;
+  font-size: 1rem;
+}
+
+.hero p {
+  z-index: 1; /* Ensures the text stays on top of the overlay */
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 2rem;
+  margin: 0; /* Remove any margin causing unwanted space */
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 500px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures images cover the entire box without distortion */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Portfolio Page Section */
+.portfolio {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  color: #003366;
+}
+
+.portfolio p {
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

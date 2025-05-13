@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Chloe Hyde Photography</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="profile-photo">
+    <img src="images/me1.jpg" alt="Chloe Hyde" />
+  </div>
+  <h1>Chloe Hyde Photography</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <section class="portfolio">
+      <h2>My Portfolio</h2>
+      <p>A curated collection of some of my favorite photos captured over the years.</p>
+  
+      <div class="portfolio-grid">
+        <a href="images/ParvejKahn.jpg" class="lightbox">
+            <img src="images/ParvejKahn.jpg" alt="Favorite Photo 1" />
+        </a>
+        <a href="images/WyattLangford.jpg" class="lightbox">
+            <img src="images/WyattLangford.jpg" alt="Favorite Photo 2" />
+        </a>
+        <a href="images/Champs.jpg" class="lightbox">
+            <img src="images/Champs.jpg" alt="Favorite Photo 3" />
+        </a>
+        <a href="images/RuebenDunk.jpg" class="lightbox">
+            <img src="images/RuebenDunk.jpg" alt="Favorite Photo 4" />
+        </a>
+        <a href="images/DedrickVanover.JPG" class="lightbox">
+            <img src="images/DedrickVanover.JPG" alt="Favorite Photo 5" />
+        </a>
+        <a href="images/BoysInMotion.jpg" class="lightbox">
+            <img src="images/BoysInMotion.jpg" alt="Favorite Photo 6" />
+        </a>
+        <a href="images/MalcolmClemons.jpg" class="lightbox">
+            <img src="images/MalcolmClemons.jpg" alt="Favorite Photo 7" />
+        </a>
+        <a href="images/BrandonSproat.jpg" class="lightbox">
+            <img src="images/BrandonSproat.jpg" alt="Favorite Photo 8" />
+        </a>
+        <a href="images/ZachGodbold.JPG" class="lightbox">
+            <img src="images/ZachGodbold.JPG" alt="Favorite Photo 9" />
+        </a>
+        <a href="images/EmilyCanaan.JPG" class="lightbox">
+            <img src="images/EmilyCanaan.JPG" alt="Favorite Photo 10" />
+        </a>
+        <a href="images/JoshRivera.JPG" class="lightbox">
+            <img src="images/JoshRivera.JPG" alt="Favorite Photo 11" />
+        </a>
+        <a href="images/Tejeda_Yoel__221025_3795_ChloeHyde.jpg" class="lightbox">
+            <img src="images/Tejeda_Yoel__221025_3795_ChloeHyde.jpg" alt="Favorite Photo 12" />
+        </a>
+        <a href="images/Ursitti_Anthony__221011_4678_ChloeHyde.JPG" class="lightbox">
+            <img src="images/Ursitti_Anthony__221011_4678_ChloeHyde.JPG" alt="Favorite Photo 13" />
+        </a>
+        <a href="images/Jensen_Thea__220531_6411_.jpg" class="lightbox">
+            <img src="images/Jensen_Thea__220531_6411_.jpg" alt="Favorite Photo 14" />
+        </a>
+        <a href="images/KD.jpg" class="lightbox">
+            <img src="images/KD.jpg" alt="Favorite Photo 15" />
+        </a>
+        <a href="images/SterlinThompson.JPG" class="lightbox">
+            <img src="images/SterlinThompson.JPG" alt="Favorite Photo 16" />
+        </a>
+        <a href="images/MaliqueSmithBand.jpg" class="lightbox">
+            <img src="images/MaliqueSmithBand.jpg" alt="Favorite Photo 17" />
+        </a>
+        <a href="images/ClaireBryant.JPG" class="lightbox">
+            <img src="images/ClaireBryant.JPG" alt="Favorite Photo 18" />
+        </a>
+        <a href="images/2022BaseballTeam_220503_9163_ChloeHyde.jpg" class="lightbox">
+            <img src="images/2022BaseballTeam_220503_9163_ChloeHyde.jpg" alt="Favorite Photo 19" />
+        </a>
+      </div>
+    </section>
+</main>
+  
+<footer>
+  <p>@photochloe</p>
+</footer>
+
+<script>
+  // Get all the images in the portfolio
+  const lightboxLinks = document.querySelectorAll('.lightbox');
+  
+  // Create the overlay div and append it to the body
+  const overlay = document.createElement('div');
+  overlay.classList.add('lightbox-overlay');
+  document.body.appendChild(overlay);
+
+  // Create a close button
+  const closeBtn = document.createElement('span');
+  closeBtn.textContent = '×';
+  closeBtn.classList.add('close-btn');
+  overlay.appendChild(closeBtn);
+
+  // Function to open the lightbox
+  lightboxLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent the default anchor link action
+      const imgSrc = link.getAttribute('href');
+      
+      // Create an image element to display in the overlay
+      const img = document.createElement('img');
+      img.src = imgSrc;
+      overlay.appendChild(img);
+
+      // Display the overlay
+      overlay.style.display = 'flex';
+    });
+  });
+
+  // Close the lightbox when the close button is clicked
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    overlay.innerHTML = ''; // Remove the image to avoid duplication
+  });
+
+  // Close the lightbox if the overlay (outside the image) is clicked
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.style.display = 'none';
+      overlay.innerHTML = ''; // Remove the image to avoid duplication
+    }
+  });
+</script>
+
+</body>
+</html>

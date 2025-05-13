@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoChloe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="profile-photo">
+          <img src="images/me1.jpg" alt="Chloe Hyde" />
+        </div>
+        <h1>Chloe Hyde Photography</h1>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+      </header>
+
+  <main>
+    <section class="hero">
+        <div class="overlay">
+            <p>Capturing Important Life Moments</p>
+        </div>
+      </section>
+      
+
+    <section class="gallery">
+      <div class="image-grid">
+        <a href="images/Ashley.jpg" class="lightbox">
+            <img src="images/Ashley.jpg" alt="Photo 1" />
+        </a>
+        <a href="images/ZachGodbold.JPG" class="lightbox">
+            <img src="images/ZachGodbold.JPG" alt="Photo 2" />
+        </a>
+        <a href="images/RyanMaseman.jpg" class="lightbox">
+            <img src="images/RyanMaseman.jpg" alt="Photo 3" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>@photochloe</p>
+  </footer>
+
+  <script>
+    // Get all the images in the portfolio
+    const lightboxLinks = document.querySelectorAll('.lightbox');
+    
+    // Create the overlay div and append it to the body
+    const overlay = document.createElement('div');
+    overlay.classList.add('lightbox-overlay');
+    document.body.appendChild(overlay);
+
+    // Create a close button
+    const closeBtn = document.createElement('span');
+    closeBtn.textContent = '×';
+    closeBtn.classList.add('close-btn');
+    overlay.appendChild(closeBtn);
+
+    // Function to open the lightbox
+    lightboxLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default anchor link action
+        const imgSrc = link.getAttribute('href');
+        
+        // Create an image element to display in the overlay
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        overlay.appendChild(img);
+
+        // Display the overlay
+        overlay.style.display = 'flex';
+      });
+    });
+
+    // Close the lightbox when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      overlay.innerHTML = ''; // Remove the image to avoid duplication
+    });
+
+    // Close the lightbox if the overlay (outside the image) is clicked
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = 'none';
+        overlay.innerHTML = ''; // Remove the image to avoid duplication
+      }
+    });
+  </script>
+
+</body>
+</html>
