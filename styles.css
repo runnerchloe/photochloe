@@ -74,7 +74,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
   position: relative;
-  background-image: url('images/AmeliaMazza.jpg'); /* Background image */
+  background-image: url('photos/AmeliaMazza.jpg'); /* Background image */
   background-size: cover;
   background-position: center;
   height: 600px; /* Adjust as needed */
@@ -657,7 +657,7 @@ body.concerts-page::before {
   left: -20%;
   width: 140%;
   height: 140%;
-  background-image: url('images/concerts1.jpg'); /* update path as needed */
+  background-image: url('photos/concerts1.jpg'); /* update path as needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
