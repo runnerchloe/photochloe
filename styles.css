@@ -634,7 +634,182 @@ footer a:hover {
 }
 
 
+/* Sports Page Specific Styles */
 
+.sports-page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Rubik', sans-serif;
+  color: #222;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-section .hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-section h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: #1e90ff; /* bright accent color */
+  letter-spacing: 2px;
+}
+
+.gallery-section {
+  margin-bottom: 3rem;
+}
+
+.gallery-section h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 3px solid #1e90ff;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo-gallery img {
+  width: 30%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(30, 144, 255, 0.5);
+}
+
+/* Sports GALLERY*/
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sport-card {
+  position: relative;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.sport-card h2 {
+  font-family: 'Anton', sans-serif;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.sport-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.sport-card:hover {
+  transform: scale(1.03);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .photo-gallery img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery img {
+    width: 100%;
+  }
+}
+
+
+
+/* SPORTS PAGES*/
+/* Track & Field Title */
+.sports-title {
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Masonary Grid */
+
+.sports-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Anton', sans-serif;
+}
+
+.masonry-gallery {
+  column-count: 5;
+  column-gap: 0.6rem;
+  padding: 0 1rem;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  display: block;
+  break-inside: avoid;
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
 
 
 
