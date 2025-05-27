@@ -51,26 +51,6 @@ header .profile-photo img {
   object-fit: cover; /* Ensures the image covers the circle without distortion */
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end; /* Aligns the navigation to the far right */
-  padding: 0;
-  margin: 0;
-  gap: 1.5rem;
-}
-
-nav a {
-  color: white;  /* Ensure the links are white */
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #cce6ff;  /* A subtle hover color change */
-  text-decoration: underline;  /* Add underline on hover */
-}
-
 /* Hero Section */
 .hero {
   position: relative;
@@ -177,26 +157,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-size: inherit;
-}
-
-footer a:hover {
-  color: #cce6ff;
-  text-decoration: underline;
-}
 
 /* Lightbox styles */
 .lightbox-overlay {
@@ -534,45 +494,6 @@ footer a:hover {
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-/* Navigation styling */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-}
-
-nav a {
-  text-decoration: none;
-  font-family: 'Rubik', sans-serif;
-  color: #222;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #b8860b;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  color: #555;
-}
-
-footer a {
-  color: #b8860b;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 
@@ -939,4 +860,113 @@ main.concerts-container h2 {
   .photo-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+
+
+/* FREELANCE PAGE*/
+
+.freelance-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.freelance-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.freelance-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto 6rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.freelance-logos img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.carousel img {
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* Shared styles for nav ul and footer KEEP*/
+nav ul, footer {
+  background-color: #003366;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #003366;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1e90ff;
+}
+
+/* Footer Styles */
+footer {
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: #add8e6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
