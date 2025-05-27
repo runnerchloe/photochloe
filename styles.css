@@ -137,6 +137,8 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+
+
 /* Portfolio Page Section */
 .portfolio {
   padding: 3rem 2rem;
@@ -259,6 +261,8 @@ footer a:hover {
   }
 }
 
+
+
 /* Gallery Categories */
 .gallery-categories {
   padding: 3rem;
@@ -310,6 +314,9 @@ footer a:hover {
   font-size: 1.5rem;
   letter-spacing: 1px;
 }
+
+
+
 
 /* Freelance Page */
 .freelance {
@@ -632,6 +639,8 @@ footer a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
+
+
 
 
 /* Sports Page Specific Styles */
