@@ -425,26 +425,6 @@ header .profile-photo img {
   text-decoration: underline;
 }
 
-/* ======= Availability Section ======= */
-.availability {
-  max-width: 600px;
-  margin: 3rem auto;
-  text-align: center;
-  font-family: 'Anton', sans-serif;
-  font-size: 1.5rem;
-  color: #222;
-}
-
-/* Remove bullets from availability list */
-.availability ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5rem;
-}
-
-.availability li {
-  margin-bottom: 0.5rem;
-}
 
 
 
