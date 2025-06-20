@@ -817,6 +817,68 @@ main.concerts-container h2 {
 
 
 
+/* NIL */
+/* Page Container */
+main.NIL-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+
+/* Page Title */
+main.NIL-container h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+/* Photo Gallery Grid */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual Gallery Images */
+.photo-gallery img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8); /* Coral hover effect */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  main.NIL-container {
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .photo-gallery img {
+    height: 250px;
+  }
+
+  main.NIL-container h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
 
 /* Shared styles for nav ul and footer KEEP*/
 nav ul, footer {
