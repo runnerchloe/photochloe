@@ -932,3 +932,101 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+
+
+
+/* ===== Responsive Tweaks ===== */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .packages h2,
+  .freelance-title,
+  .sports-title,
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .freelance-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .sport-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 600px) {
+  .image-grid img,
+  .portfolio-grid img,
+  .category-card img,
+  .package-photos img,
+  .contact-photo,
+  .freelance-logos img {
+    height: auto;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .packages h2,
+  .freelance-title,
+  .sports-title,
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .freelance-logos {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-top: 1rem;
+  }
+
+  /* Slow carousel for mobile */
+  .carousel {
+    animation: scroll 90s linear infinite;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .sport-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .packages h2,
+  .freelance-title,
+  .sports-title,
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .package-photos {
+    grid-template-columns: 1fr;
+  }
+}
