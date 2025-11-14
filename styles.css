@@ -624,6 +624,71 @@ header .profile-photo img {
   }
 }
 
+/*Graphics */
+.graphics-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.graphics-section h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.graphics-section p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.graphics-link-box {
+  margin-top: 20px;
+}
+
+.graphics-link {
+  font-family: 'Rubik', sans-serif;
+  padding: 12px 20px;
+  border: 2px solid black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.graphics-link:hover {
+  background: black;
+  color: white;
+}.graphics-gallery {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.graphics-gallery h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.graphics-gallery p {
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.graphics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.graphics-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
 
 /* Concerts Page Background with Tilted Image */
