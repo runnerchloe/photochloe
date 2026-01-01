@@ -276,13 +276,14 @@ header .profile-photo img {
 }
 
 
+
 /* =========================
-   GRAD HERO SECTION
+   GRAD!
 ========================= */
 
 .grad-hero {
   position: relative;
-  height: 60vh;
+  height: 65vh;
   width: 100%;
   background-image: url("photos/photo10.jpg"); 
   background-size: cover;
@@ -298,7 +299,7 @@ header .profile-photo img {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8); /* photo darkness */
+  background: rgba(0, 0, 0, 0.75); /* photo darkness */
 }
 
 .hero-content {
@@ -310,10 +311,11 @@ header .profile-photo img {
 }
 
 .hero-content h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 3.5rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.35rem;
 }
+
 
 .hero-content p {
   font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -321,7 +323,27 @@ header .profile-photo img {
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.5rem;
+  color: #f2f2f2;
+}
+
+.hero-content h3 {
+  text-align: center;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.55rem;
+  color: #f2f2f2;
+}
+
+.hero-content h4 {
+  text-align: center;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 2.5rem;
   color: #f2f2f2;
 }
 
@@ -344,7 +366,26 @@ header .profile-photo img {
   transform: translateY(-2px);
 }
 
+.cta-btn1 {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #A27752;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn1.availability {
+  background-color: #006f71;
+  transform: translateY(-2px);
+}
+
 /* ======= Packages Section ======= */
+
 .packages {
   max-width: 1200px;
   margin: 2rem auto;
@@ -355,8 +396,9 @@ header .profile-photo img {
   text-align: center;
   font-family: 'Anton', sans-serif;
   font-size: 2.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
+
 
 /* Two packages per row */
 .package-grid {
@@ -378,16 +420,19 @@ header .profile-photo img {
 
 /* Package Titles */
 .package-box h3 {
-  font-family: 'Anton', sans-serif;
-  font-size: 1.6rem;
-  margin-bottom: 0.2rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
   text-align: center;
+  color: #f2f2f2;
 }
 .package-box h4 {
-  font-family: 'Anton', sans-serif;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-style: italic;
   font-size: 1rem;
   margin-bottom: 1rem;
   text-align: center;
+  color: #f2f2f2;
 }
 
 /* Container for package photos */
@@ -428,10 +473,8 @@ header .profile-photo img {
   font-size: 1.2rem;
 }
 .booking a {
-  color: inherit;
-  text-decoration: underline;
+  color: #f2f2f2;
 }
-
 
 
 
@@ -445,8 +488,6 @@ header .profile-photo img {
   border-radius: 50%;
   object-fit: cover;
 }
-
-
 
 
 .contact-main {
@@ -514,7 +555,10 @@ header .profile-photo img {
 
 
 
-/* Sports Page Specific Styles */
+
+/* =========================
+   SPORTS!
+========================= */
 
 .sports-page {
   max-width: 1000px;
@@ -881,8 +925,9 @@ main.concerts-container h2 {
 
 
 
-
-/* FREELANCE PAGE*/
+/* =========================
+   FREELANCE!
+========================= */
 
 .freelance-container {
   max-width: 1000px;
