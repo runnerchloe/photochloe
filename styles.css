@@ -283,7 +283,7 @@ header .profile-photo img {
 
 .grad-hero {
   position: relative;
-  height: 65vh;
+  height: 60vh;
   width: 100%;
   background-image: url("photos/photo10.jpg"); 
   background-size: cover;
@@ -343,7 +343,7 @@ header .profile-photo img {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   color: #f2f2f2;
 }
 
@@ -386,75 +386,100 @@ header .profile-photo img {
 
 /* ======= Packages Section ======= */
 
-.packages {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.packages h2 {
+.grad-packages {
+  padding: 4rem 2rem;
   text-align: center;
+}
+
+.grad-packages-title {
   font-family: 'Anton', sans-serif;
-  font-size: 2.8rem;
-  margin-bottom: 1.2rem;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #333;
 }
 
-
-/* Two packages per row */
-.package-grid {
+/* Grid layout */
+.packages-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* Package Box styling */
-.package-box {
-  background-color: #006f71; /* Light grey background */
-  padding: 1.4rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Individual box */
+.package-card {
+  border: 3px solid #00857c; /* Coastal Carolina teal */
+  background-color: rgba(0, 133, 124, 0.02); /* transparent teal */
+  border-radius: 15px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding-bottom: 185px; /* makes the outline taller */
 }
 
-/* Package Titles */
-.package-box h3 {
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
-  text-align: center;
-  color: #f2f2f2;
+/* Text area */
+.package-content {
+  padding: 1.8rem 1.5rem;
+  font-family: 'Rubik', sans-serif; /* same as spring special */
+  color: #333;
 }
-.package-box h4 {
+
+.package-content h3 {
+  font-size: 1.4rem;
+  text-align: center;
   font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-style: italic;
-  font-size: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.package-content .price {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-  text-align: center;
-  color: #f2f2f2;
 }
 
-/* Container for package photos */
-.package-photos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.70rem;
-  width: 100%;
+.package-content p {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
 }
 
-/* Package photos same dimension & style */
-.package-photos img {
+/* FLOATING PACKAGE PHOTOS – FIXED FOR YOUR HTML */
+
+.package-card {
+  position: relative;
+  overflow: visible;
+}
+
+.package-image {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 255px;
+  border-radius: 1px;
+  overflow: hidden;
+  background-color: rgba(0, 133, 124, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.package-image img {
   width: 100%;
-  height: 315px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
 }
 
-.package-photos img:hover {
-  transform: scale(1.05);
+/* Space for the hanging images */
+.packages-grid {
+  padding-bottom: 100px;
 }
 
 
@@ -462,8 +487,8 @@ header .profile-photo img {
 .booking {
   text-align: center;
   font-family: 'Anton', sans-serif;
-  margin: 3rem auto;
-  padding: 2rem 1rem;
+  margin: auto;
+  padding: 1rem 1rem;
 }
 .booking h2 {
   font-size: 2rem;
