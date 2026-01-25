@@ -283,13 +283,6 @@ header .profile-photo img {
 
 .grad-hero {
   position: relative;
-  height: 60vh;
-  width: 100%;
-  background-image: url("photos/photo10.jpg"); 
-  background-size: cover;
-  background-position: center 65%; /* photo centering */
-  background-repeat: no-repeat;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,21 +292,20 @@ header .profile-photo img {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75); /* photo darkness */
 }
 
 .hero-content {
   position: relative;
   text-align: center;
   max-width: 800px;
-  padding: 0 1rem;
+  padding: 2rem;
   color: #006f71;
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
   font-weight: 500;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 
@@ -323,8 +315,8 @@ header .profile-photo img {
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  margin-bottom: 2.5rem;
-  color: #f2f2f2;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .hero-content h3 {
@@ -333,8 +325,8 @@ header .profile-photo img {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.55rem;
-  color: #f2f2f2;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .hero-content h4 {
@@ -344,7 +336,7 @@ header .profile-photo img {
   font-weight: 500;
   line-height: 1;
   margin-bottom: 1.5rem;
-  color: #f2f2f2;
+  color: #333;
 }
 
 /* CTA BUTTON */
@@ -387,14 +379,14 @@ header .profile-photo img {
 /* ======= Packages Section ======= */
 
 .grad-packages {
-  padding: 4rem 2rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
 .grad-packages-title {
   font-family: 'Anton', sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   color: #333;
 }
 
