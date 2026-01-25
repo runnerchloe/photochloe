@@ -303,19 +303,20 @@ header .profile-photo img {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   font-weight: 500;
-  margin-bottom: 0.3rem;
+  line-height: 1.3;
+  margin-top: 1rem;
 }
-
 
 .hero-content p {
   font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.02em;
-  line-height: 1.2;
-  margin-bottom: 2rem;
+  line-height: 2.6;
+  margin-top: 0.6rem;
+  margin-bottom: 1.2rem;
   color: #333;
 }
 
@@ -325,8 +326,17 @@ header .profile-photo img {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
   color: #333;
+}
+
+.grad-hero-text-only .hero-content h3,
+.grad-hero-text-only .hero-content h4 {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(0, 133, 124, 0.15); /* soft teal highlight */
+  border-radius: 6px;
 }
 
 .hero-content h4 {
@@ -335,46 +345,9 @@ header .profile-photo img {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1;
-  margin-bottom: 1.5rem;
   color: #333;
 }
 
-/* CTA BUTTON */
-.cta-btn {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  font-size: 1.3rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: #fff;
-  background-color: #A27752;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #006f71;
-  transform: translateY(-2px);
-}
-
-.cta-btn1 {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  font-size: 1.3rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: #fff;
-  background-color: #A27752;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.cta-btn1.availability {
-  background-color: #006f71;
-  transform: translateY(-2px);
-}
 
 /* ======= Packages Section ======= */
 
@@ -387,6 +360,7 @@ header .profile-photo img {
   font-family: 'Anton', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
   color: #333;
 }
 
@@ -450,6 +424,7 @@ header .profile-photo img {
   overflow: visible;
 }
 
+
 .package-image {
   position: absolute;
   bottom: -70px;
@@ -480,19 +455,68 @@ header .profile-photo img {
   text-align: center;
   font-family: 'Anton', sans-serif;
   margin: auto;
-  padding: 1rem 1rem;
-}
-.booking h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.booking p {
-  font-size: 1.2rem;
-}
-.booking a {
-  color: #f2f2f2;
+  padding: 1rem 2rem;
+  font-size: 3 rem
 }
 
+/* CTA BUTTON */
+
+.cta-btn:hover {
+  background-color: #006f71;
+  transform: translateY(-2px);
+}
+
+.cta-btn1 {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #A27752;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn1.availability {
+  background-color: #006f71;
+  transform: translateY(-2px);
+}
+
+.cta-btn1:hover {
+  background-color: #006f71; /* teal */
+  transform: translateY(-2px);
+}
+  .grad-hero-bottom {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 1rem 1rem;
+    background-image: url('photos/photo10.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem; /* taller section */
+    min-height: 400px;  /* ensures height on small screens */
+    background-size: cover; /* keeps image covering section */
+    /* THIS CONTROLS THE CROP */
+  background-position: center 66%; /* centers horizontally, aligns top vertically */
+  
+    /* ADD this for overlay */
+  }
+  
+  .grad-hero-bottom::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.56); /* opacity */
+    z-index: 1;
+  }
+  .grad-hero-bottom .hero-content {
+    position: relative;
+    z-index: 2; /* keep text above overlay */
+  }
 
 
 /* ======= Header & Footer Styling (assuming existing styles) ======= */
