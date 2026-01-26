@@ -650,26 +650,168 @@ header .profile-photo img {
   color: #0055aa;
 }
 
-/* iPhone */
-@media (max-width: 430px) {
+/* ================================
+   MOBILE RESET & SAFETY NET
+================================ */
+@media (max-width: 768px) {
+
+  /* GLOBAL MOBILE FIXES */
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  section,
+  div {
+    max-width: 100%;
+  }
+
+  /* ================================
+     GRAD PAGE GENERAL LAYOUT
+  ================================ */
+  .grad-page,
+  .grad-photos,
+  .grad-container {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* ================================
+     PHOTO GALLERY — NO OVERLAP
+  ================================ */
+  .gallery,
+  .gallery-grid,
+  .photo-grid,
+  .lightbox-gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .gallery img,
+  .gallery-grid img,
+  .photo-grid img,
+  .lightbox-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* HARD STOP FLOAT/ABSOLUTE ISSUES */
+  .gallery::after,
+  .gallery-grid::after,
+  .photo-grid::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* ================================
+     CURRENT AVAILABILITY SECTION
+  ================================ */
+  .grad-availability {
+    width: 100%;
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 10px;
+    clear: both;
+  }
 
   .grad-availability h2 {
     font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .availability-note {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .availability-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .availability-card {
-    border-width: 1.5px;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .availability-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  .availability-card ul {
+    padding: 0;
+    margin: 0;
   }
 
   .availability-card li {
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  /* ================================
+     BOOK SESSION IMAGE CTA
+  ================================ */
+  .book-session-section {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .book-session-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .book-session-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
   }
 
   .book-session-overlay h2 {
     font-size: 1.6rem;
+    margin-bottom: 12px;
   }
-}
 
+  .book-session-overlay a,
+  .book-session-overlay button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+}
 
 
 
