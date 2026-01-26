@@ -661,6 +661,7 @@ header .profile-photo img {
     .photo-grid:first-of-type,
     .lightbox-gallery:first-of-type {
       margin-top: -20px;
+    }
 
   /* GLOBAL MOBILE FIXES */
   * {
