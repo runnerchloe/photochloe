@@ -650,6 +650,26 @@ header .profile-photo img {
   color: #0055aa;
 }
 
+/* iPhone */
+@media (max-width: 430px) {
+
+  .grad-availability h2 {
+    font-size: 1.8rem;
+  }
+
+  .availability-card {
+    border-width: 1.5px;
+  }
+
+  .availability-card li {
+    line-height: 1.4;
+  }
+
+  .book-session-overlay h2 {
+    font-size: 1.6rem;
+  }
+}
+
 
 
 
