@@ -655,6 +655,13 @@ header .profile-photo img {
 ================================ */
 @media (max-width: 768px) {
 
+    /* PULL FIRST GALLERY UP SLIGHTLY */
+    .gallery:first-of-type,
+    .gallery-grid:first-of-type,
+    .photo-grid:first-of-type,
+    .lightbox-gallery:first-of-type {
+      margin-top: -20px;
+
   /* GLOBAL MOBILE FIXES */
   * {
     box-sizing: border-box;
