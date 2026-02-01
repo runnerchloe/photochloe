@@ -128,6 +128,12 @@ footer a:hover {
   color: #F2EAE0;
 }
 
+.masonry-gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
 /* =========================
    GALLERY SECTIONS - Portfolio
 ========================= */
@@ -145,6 +151,12 @@ footer a:hover {
 
 .gallery h2,
 .portfolio h2,
+.TrackField h2,
+.Baseball h2,
+.Basketball h2,
+.Football h2,
+.Cross h2,
+.Other h2,
 .graphics-section h2,
 .graphics-gallery h2,
 .gallery-categories h2 {
@@ -152,6 +164,7 @@ footer a:hover {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .image-grid {
@@ -572,8 +585,7 @@ footer a:hover {
 }
 
 .availability-card li {
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  margin-bottom: 10px;
+   margin-bottom: 10px;
   color: #82B2C0;
   font-size: 1.2rem;
   font-weight: 600;
@@ -604,9 +616,196 @@ footer a:hover {
 
 .cta-btn1.availability,
 .cta-btn1:hover {
-  background-color: #006f71;
+  background-color: #f6c7b3;
   transform: translateY(-2px);
 }
+
+/* Center CTA button on Pricing page */
+.pricing-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* =========================
+   PRICING PAGE – IMAGES LEFT, TEXT RIGHT WITH COLUMNS
+========================= */
+
+.pricing-hero {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.pricing-hero h1 {
+  font-size: 3rem;
+  letter-spacing: 0.05rem;
+}
+
+.pricing-hero p {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #82B2C0;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   PRICING SECTIONS
+========================= */
+
+.pricing-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+.pricing-section {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  align-items: start;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+}
+
+.pricing-image {
+  overflow: hidden;
+  height: 480px;
+  width: 100%;
+}
+
+.pricing-image img.img-vertical {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =========================
+   HEADER + LINE
+========================= */
+.pricing-box h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.7rem;
+  color: #82B2C0;
+  margin-bottom: 1rem;
+  text-align: left;
+  position: relative;
+}
+
+.pricing-box h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  max-width: 725px;
+  height: 3px;
+  background-color: #82B2C0;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================
+   TEXT BODY
+========================= */
+.text-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+.text-body.single-column {
+  grid-template-columns: 1fr;
+}
+
+.text-body .column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.text-body .column li {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #82B2C0;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+/* =========================
+   NOTE
+========================= */
+.pricing-note {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* =========================
+   SECTION BUTTONS
+========================= */
+.section-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #F2EAE0;
+  background-color: #82B2C0;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.section-btn:hover {
+  background-color: #f6c7b3;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   CTA BUTTON (centered)
+========================= */
+.pricing-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+  .pricing-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .pricing-image {
+    height: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .text-body {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pricing-box h2 {
+    text-align: center;
+  }
+}
+
+
+
+
 
 /* =========================
    CONTACT PAGE
@@ -625,10 +824,21 @@ footer a:hover {
 .contact-intro h3 {
   font-size: 1.2rem;
   font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 0.8rem;
+  color: #82B2C0;
+}
+.contact-intro h4 {
+  font-size: 0.9rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   margin-bottom: 0.6rem;
   color: #82B2C0;
 }
-
+.contact-intro h5 {
+  font-size: 0.75rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 0.6rem;
+  color: #82B2C0;
+}
 .contact-photo {
   width: 250px;
   height: 300px;
