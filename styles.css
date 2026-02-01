@@ -1,1335 +1,93 @@
-/* Google Fonts */
+/* =========================
+   GOOGLE FONTS
+========================= */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-/* Reset some default browser styles */
+/* =========================
+   RESET & GLOBAL STYLES
+========================= */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Ensures padding and border don't affect layout */
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Anton', sans-serif; /* Changed to Anton font */
-  background-color: #f0f8ff; /* Soft blue background */
-  color: #333;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #82B2C0;
+  background-color: #DCECE9;
   margin: 0;
-  padding: 0; /* Ensure no extra padding */
+  padding: 0;
 }
 
-/* Funky header font and styling */
-header h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 3rem;
-  margin: 0;
-  letter-spacing: 1px;
-  margin-left: 15px; /* Space between the image and the title */
-  flex-grow: 1; /* Allows the title to take up available space */
-  text-align: left; /* Keeps the title aligned to the left */
+/* Override specific containers that might have their own background */
+body.concerts-page,
+main.NIL-container,
+.contact-main,
+.portfolio,
+.sports-section,
+.included-section,
+.pricing-cta,
+.grad-packages,
+.grad-hero-bottom {
+  background-color: #DCECE9;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 header {
-  background-color: #003366;
-  color: white;
+  background-color: #82B2C0;
   padding: 1rem 2rem;
   display: flex;
-  align-items: center;  /* Aligns both the image and text vertically */
-  justify-content: space-between; /* Moves the nav to the far right */
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  color: #F2EAE0;
+  margin-left: 15px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+header nav {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 3rem;
+  color: #F2EAE0;
+  margin-left: 15px;
+  flex-grow: 1;
+  text-align: right;
+  background-color: #82B2C0;
 }
 
 header .profile-photo {
-  width: 50px; /* Size of the profile image */
+  width: 50px;
   height: 50px;
-  border-radius: 50%; /* Make the image circular */
+  border-radius: 50%;
   overflow: hidden;
-  border: 3px solid white; /* White frame around the image */
+  border: 3px solid #DCECE9;
 }
 
 header .profile-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the circle without distortion */
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  background-image: url('photos/AmeliaMazza.jpg'); /* Background image */
-  background-size: cover;
-  background-position: center;
-  height: 600px; /* Adjust as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-/* Overlay in Hero Section */
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: flex-end;  /* Align to bottom */
-  height: 100%;
-  padding-bottom: 10px;
-  color: white;
-  font-size: 1rem;
-}
-
-.hero p {
-  z-index: 1; /* Stay above overlay */
-}
-
-/* Gallery Section */
-.gallery {
-  padding: 2rem;
-  margin: 0;
-}
-
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.image-grid img {
-  width: 100%;
-  height: 500px; /* Fixed height */
   object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
 }
-
-.image-grid img:hover {
-  transform: scale(1.05);
-}
-
-
-
-/* Portfolio Page Section */
-.portfolio {
-  padding: 3rem 2rem;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.portfolio h2 {
-  font-size: 2rem;
-  color: #003366;
-}
-
-.portfolio p {
-  font-size: 0.75rem;
-  margin-bottom: 2rem;
-  color: #555;
-  letter-spacing: 0.5px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.2rem;
-}
-
-.portfolio-grid img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-}
-
-
-/* Lightbox styles */
-.lightbox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-intro {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-photo {
-    width: 80%;
-  }
-}
-
-/* Responsive Tweaks */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  /* Stack category cards on small screens */
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* Gallery Categories */
-.gallery-categories {
-  padding: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.category-card {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.category-card img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.category-card:hover img {
-  transform: scale(1.05);
-}
-
-.category-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.5);
-  color: white;
-  padding: 0.75rem 1rem;
-  text-align: center;
-}
-
-.category-overlay h2 {
-  margin: 0;
-  font-family: 'Anton', sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-
 
 /* =========================
-   GRAD!
+   NAV & FOOTER
 ========================= */
-
-.grad-hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.grad-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-  color: #006f71;
-}
-
-.hero-content h1 {
-  font-size: 3.4rem;
-  font-weight: 500;
-  line-height: 1.3;
-  margin-top: 1rem;
-}
-
-.hero-content p {
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 2.6;
-  margin-top: 0.6rem;
-  margin-bottom: 1.2rem;
-  color: #333;
-}
-
-.hero-content h3 {
+nav,
+footer {
+  background-color: #82B2C0;
+  color: #F2EAE0;
   text-align: center;
   font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-  color: #333;
-}
-
-.grad-hero-text-only .hero-content h3,
-.grad-hero-text-only .hero-content h4 {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  background-color: rgba(0, 133, 124, 0.15); /* soft teal highlight */
-  border-radius: 6px;
-}
-
-.hero-content h4 {
-  text-align: center;
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1;
-  color: #333;
-}
-
-
-/* ======= Packages Section ======= */
-
-.grad-packages {
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.grad-packages-title {
-  font-family: 'Anton', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05rem;
-  color: #333;
-}
-
-/* Grid layout */
-.packages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* Individual box */
-.package-card {
-  border: 3px solid #00857c; /* Coastal Carolina teal */
-  background-color: rgba(0, 133, 124, 0.02); /* transparent teal */
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 185px; /* makes the outline taller */
-}
-
-/* Text area */
-.package-content {
-  padding: 1.8rem 1.5rem;
-  font-family: 'Rubik', sans-serif; /* same as spring special */
-  color: #333;
-}
-
-.package-content h3 {
-  font-size: 1.4rem;
-  text-align: center;
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 2.5rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.package-content .price {
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.package-content p {
-  margin: 0.3rem 0;
-  font-size: 1.2rem;
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-}
-
-/* FLOATING PACKAGE PHOTOS – FIXED FOR YOUR HTML */
-
-.package-card {
-  position: relative;
-  overflow: visible;
-}
-
-
-.package-image {
-  position: absolute;
-  bottom: -70px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 255px;
-  border-radius: 1px;
-  overflow: hidden;
-  background-color: rgba(0, 133, 124, 0.15);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.package-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Space for the hanging images */
-.packages-grid {
-  padding-bottom: 200px;
-}
-
-.grad-availability {
-  max-width: 1100px;
-  margin: 80px auto 60px;
-  text-align: center;
-}
-
-.grad-availability h2 {
-  font-family: 'Anton', sans-serif;
-  color: #333;
-  font-size: 3rem;
-  letter-spacing: 0.06rem;
-  margin-top: -150px;
-  margin-bottom: 8px;
-}
-
-.availability-note {
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  color: #333;
-  margin-bottom: 40px;
-  font-weight: 550;
-
-}
-
-.availability-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.availability-card {
-  border: 2px solid #007c7c;
-  background: rgba(0, 124, 124, 0.08);
-  padding: 15px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.availability-card h3 {
-  font-family: 'Anton', sans-serif;
-  color: #007c7c;
-  margin-bottom: 15px;
-  font-size: 2rem;
-}
-
-.availability-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.availability-card li {
-  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: 550;
-}
-
-/* ======= Booking Section ======= */
-.booking {
-  text-align: center;
-  font-family: 'Anton', sans-serif;
-  margin: auto;
-  padding: 1rem 2rem;
-  font-size: 3 rem
-}
-
-/* CTA BUTTON */
-
-.cta-btn:hover {
-  background-color: #006f71;
-  transform: translateY(-2px);
-}
-
-.cta-btn1 {
-  display: inline-block;
-  padding: 1rem 2.2rem;
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: #fff;
-  background-color: #A27752;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.cta-btn1.availability {
-  background-color: #006f71;
-  transform: translateY(-2px);
-}
-
-.cta-btn1:hover {
-  background-color: #006f71; /* teal */
-  transform: translateY(-2px);
-}
-  .grad-hero-bottom {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    padding: 1rem 1rem;
-    background-image: url('photos/photo10.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4rem 2rem; /* taller section */
-    min-height: 400px;  /* ensures height on small screens */
-    background-size: cover; /* keeps image covering section */
-    /* THIS CONTROLS THE CROP */
-  background-position: center 66%; /* centers horizontally, aligns top vertically */
-  
-    /* ADD this for overlay */
-  }
-  
-  .grad-hero-bottom::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.56); /* opacity */
-    z-index: 1;
-  }
-  .grad-hero-bottom .hero-content {
-    position: relative;
-    z-index: 2; /* keep text above overlay */
-  }
-
-
-/* ======= Header & Footer Styling (assuming existing styles) ======= */
-/* You can keep your existing header/footer styles or add below if needed */
-
-/* Profile photo in header */
-.profile-photo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-
-.contact-main {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #fdfdfd;
-}
-
-.contact-intro {
-  margin-bottom: 2rem;
-}
-
-.contact-photo {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 0; /* square shape */
-  border: 6px solid #FA4616;
-  margin-bottom: 0.5rem;
-}
-
-.contact-intro h2 {
-  font-family: 'Anton', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: #003366;
-}
-
-.contact-intro h3 {
-  font-size: 1.2rem;
-  font-family: 'Dancing Script', cursive;
-  color: #444;
-}
-
-.contact-card {
-  max-width: 400px;
-  margin: 0 auto;
-  background-color: #f0f0f0;
-  border-radius: 14px;
-  padding: 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: scale(1.02);
-}
-
-.contact-info p {
-  margin: 1rem 0;
-  font-size: 1.1rem;
-  color: #003366;
-}
-
-.contact-info a {
-  color: #003366;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-  color: #0055aa;
-}
-
-/* ================================
-   MOBILE RESET & SAFETY NET
-================================ */
-@media (max-width: 768px) {
-
-  /* GLOBAL MOBILE FIXES */
-  * {
-    box-sizing: border-box;
-  }
-
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-
-  section,
-  div {
-    max-width: 100%;
-  }
-
-  /* ================================
-     GRAD PAGE GENERAL LAYOUT
-  ================================ */
-  .grad-page,
-  .grad-photos,
-  .grad-container {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* ================================
-     PHOTO GALLERY — NO OVERLAP
-  ================================ */
-  .gallery,
-  .gallery-grid,
-  .photo-grid,
-  .lightbox-gallery {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    overflow: hidden;
-    margin-bottom: 50px;
-  }
-
-  .gallery img,
-  .gallery-grid img,
-  .photo-grid img,
-  .lightbox-gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* HARD STOP FLOAT/ABSOLUTE ISSUES */
-  .gallery::after,
-  .gallery-grid::after,
-  .photo-grid::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  /* ================================
-     CURRENT AVAILABILITY SECTION
-  ================================ */
-  .grad-availability {
-    width: 100%;
-    max-width: 100%;
-    margin: 40px auto;
-    padding: 0 10px;
-    clear: both;
-  }
-
-  .grad-availability h2 {
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-
-  .availability-note {
-    font-size: 0.9rem;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .availability-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .availability-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
-    border-radius: 10px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .availability-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
-
-  .availability-card ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  .availability-card li {
-    font-size: 0.95rem;
-    line-height: 1.45;
-  }
-
-  /* ================================
-     BOOK SESSION IMAGE CTA
-  ================================ */
-  .book-session-section {
-    width: 100%;
-    margin-top: 40px;
-    position: relative;
-  }
-
-  .book-session-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-  }
-
-  .book-session-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .book-session-overlay h2 {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-  }
-
-  .book-session-overlay a,
-  .book-session-overlay button {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-
-}
-
-
-
-
-/* =========================
-   SPORTS!
-========================= */
-
-.sports-page {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  font-family: 'Rubik', sans-serif;
-  color: #222;
-}
-
-.hero-section {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.hero-section .hero-image {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.hero-section h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 3rem;
-  margin-top: 1rem;
-  color: #1e90ff; /* bright accent color */
-  letter-spacing: 2px;
-}
-
-.gallery-section {
-  margin-bottom: 3rem;
-}
-
-.gallery-section h2 {
-  font-family: 'Anton', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-  border-bottom: 3px solid #1e90ff;
-  display: inline-block;
-  padding-bottom: 0.25rem;
-}
-
-.photo-gallery {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.photo-gallery img {
-  width: 30%;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(30, 144, 255, 0.5);
-}
-
-/* Sports GALLERY*/
-
-.sports-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.sport-card {
-  position: relative;
-  height: 350px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.sport-card h2 {
-  font-family: 'Anton', sans-serif;
-  color: white;
-  font-size: 2rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  z-index: 1;
-}
-
-.sport-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 0;
-}
-
-.sport-card:hover {
-  transform: scale(1.03);
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .photo-gallery img {
-    width: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  .photo-gallery img {
-    width: 100%;
-  }
-}
-
-
-
-/* SPORTS PAGES*/
-/* Track & Field Title */
-.sports-title {
-  font-family: 'Anton', sans-serif;
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Masonary Grid */
-
-.sports-title {
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-family: 'Anton', sans-serif;
-}
-
-.masonry-gallery {
-  column-count: 5;
-  column-gap: 0.6rem;
-  padding: 0 1rem;
-}
-
-.masonry-gallery img {
-  width: 100%;
-  margin-bottom: 0.6rem;
-  display: block;
-  break-inside: avoid;
-}
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .masonry-gallery {
-    column-count: 3;
-  }
-}
-
-@media (max-width: 900px) {
-  .masonry-gallery {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .masonry-gallery {
-    column-count: 1;
-  }
-}
-
-/*Graphics */
-.graphics-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.graphics-section h2 {
-  font-family: 'Anton', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.graphics-section p {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.graphics-link-box {
-  margin-top: 20px;
-}
-
-.graphics-link {
-  font-family: 'Rubik', sans-serif;
-  padding: 12px 20px;
-  border: 2px solid black;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: 0.2s ease;
-}
-
-.graphics-link:hover {
-  background: black;
-  color: white;
-}.graphics-gallery {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.graphics-gallery h2 {
-  font-family: 'Anton', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.graphics-gallery p {
-  font-family: 'Rubik', sans-serif;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
-}
-
-.graphics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.graphics-grid img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-
-/* Concerts Page Background with Tilted Image */
-body.concerts-page {
-  background-color: #000; /* fallback background color */
-  position: relative;
-  overflow-x: hidden;
-  font-family: 'Anton', sans-serif;
-  color: white;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-body.concerts-page::before {
-  content: "";
-  position: fixed;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
-  background-image: url('photos/concerts1.jpg'); /* update path as needed */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: rotate(-5deg);
-  filter: brightness(0.6);
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Main container to add some padding */
-main.concerts-container {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay for readability */
-  border-radius: 10px;
-}
-
-/* Page Title */
-main.concerts-container h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 0.6rem;
-  letter-spacing: 2px;
-  color: whitesmoke
-}
-main.concerts-container h2 {
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-  color: whitesmoke
-}
-
-/* Photo Gallery Grid */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Individual gallery images */
-.photo-gallery img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.photo-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8);
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  main.concerts-container {
-    margin: 2rem 1rem;
-    padding: 1rem;
-  }
-
-  .photo-gallery img {
-    height: 250px;
-  }
-
-  main.concerts-container h1 {
-    font-size: 2rem;
-  }
-}
-
-
-
-
-
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .pricing,
-  .availability,
-  .signup {
-    margin: 2rem 1rem;
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .photo-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-
-/* =========================
-   FREELANCE!
-========================= */
-
-.freelance-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.freelance-title {
-  font-family: 'Anton', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
-}
-
-.freelance-logos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-  max-width: 800px;
-  margin: 0 auto 6rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.freelance-logos img {
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-
-}
-
-.carousel-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin-top: 3rem;
-}
-
-.carousel {
-  display: flex;
-  width: max-content; /* width grows with all images */
-  animation: scroll 60s linear infinite;
-}
-
-.carousel img {
-  width: auto;
-  height: 300px;
-  object-fit: cover;
-  margin-right: 20px;
-  border-radius: 8px;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    /* Move left by the total width of all images plus margins */
-    transform: translateX(calc(-200px * 17 - 20px * 16));
-  }
-}
-
-
-
-
-/* NIL */
-/* Page Container */
-main.NIL-container {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-  border-radius: 10px;
-}
-
-/* Page Title */
-main.NIL-container h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  color: #222;
-}
-
-/* Photo Gallery Grid */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Individual Gallery Images */
-.photo-gallery img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.photo-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8); /* Coral hover effect */
-}
-
-/* Responsive Tweaks */
-@media (max-width: 600px) {
-  main.NIL-container {
-    margin: 2rem 1rem;
-    padding: 1rem;
-  }
-
-  .photo-gallery img {
-    height: 250px;
-  }
-
-  main.NIL-container h1 {
-    font-size: 2rem;
-  }
-}
-
-
-
-
-
-
-
-/* Shared styles for nav ul and footer KEEP*/
-nav ul, footer {
-  background-color: #003366;
-  color: white;
-  font-family: 'Rubik', sans-serif;
-  text-align: center;
-}
-
-/* Navigation Styles */
-nav {
-  background-color: #003366;
-  padding: 1rem;
-  text-align: center;
 }
 
 nav ul {
@@ -1354,7 +112,6 @@ nav ul li a:hover {
   color: #1e90ff;
 }
 
-/* Footer Styles */
 footer {
   padding: 2rem 1rem;
   font-size: 0.9rem;
@@ -1368,14 +125,553 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+  color: #F2EAE0;
+}
+
+/* =========================
+   GALLERY SECTIONS - Portfolio
+========================= */
+.gallery,
+.portfolio-grid,
+.image-grid,
+.photo-gallery {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.gallery {
+  padding: 2rem;
+}
+
+.gallery h2,
+.portfolio h2,
+.graphics-section h2,
+.graphics-gallery h2,
+.gallery-categories h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-grid {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.image-grid img,
+.portfolio-grid img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover,
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.portfolio p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #82B2C0;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.portfolio-grid img {
+  height: 350px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 
 
 
-/* ===== Responsive Tweaks ===== */
 
-/* Medium Screens (Tablets) */
+
+/* =========================
+   INDEX PAGE
+========================= */
+
+
+.gallery-categories {
+  padding: 2rem;
+  background-color: #DCECE9;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 1.2rem; /* gap between cards */
+  justify-items: center;
+  align-items: start;
+}
+
+.category-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-overlay h2 {
+  font-family: 'Fredoka One', cursive;
+  color: #F2EAE0;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 0.8rem;
+  }
+
+  .category-overlay h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 0.5rem;
+  }
+
+  .category-overlay h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* =========================
+   SPORTS / GALLERIES PAGE
+========================= */
+
+.gallery-categories {
+  padding: 2rem;
+  background-color: #DCECE9;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 1.2rem; /* gap between cards */
+  justify-items: center;
+  align-items: start;
+}
+
+.category-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+.category-overlay h2 {
+  font-family: 'Fredoka One', cursive;
+  color: #F2EAE0;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+/* Responsive */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 0.8rem;
+  }
+
+  .category-overlay h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 0.5rem;
+  }
+
+  .category-overlay h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* =========================
+   GRAD PAGES
+========================= */
+.grad-hero,
+.grad-hero-bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grad-hero-bottom {
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 400px;
+  background-image: url('photos/photo10.jpg');
+  background-size: cover;
+  background-position: center 66%;
+}
+
+.grad-hero-bottom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.56);
+  z-index: 1;
+}
+
+.grad-hero-bottom .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1,
+.grad-packages-title,
+.grad-availability h2,
+.availability-card h3,
+.contact-intro h2,
+.pricing-hero h1,
+.pricing-text h2,
+.sports-section h2,
+.sport-card h3,
+.included-section h2,
+.graphics-section h2,
+.graphics-gallery h2,
+.gallery-section h2,
+.hero-section h1,
+.freelance-title {
+  font-family: 'Fredoka One', cursive;
+  color: #82B2C0;
+}
+
+/* Grad Hero Text */
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  color: #82B2C0;
+}
+
+.hero-content h1 {
+  font-size: 3.4rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+.hero-content p,
+.hero-content h3,
+.hero-content h4 {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #82B2C0;
+  margin-bottom: auto;
+}
+
+/* =========================
+   GRAD PACKAGES
+========================= */
+.grad-packages {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.grad-packages-title {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05rem;
+  color: #82B2C0;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 200px;
+}
+
+.package-card {
+  border: 5px solid #82B2C0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+  position: relative;
+}
+
+.package-image {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.package-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.package-content {
+  padding: 1rem 1rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #82B2C0;
+}
+
+.package-content h3 {
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 0.02em;
+  font-size: 2rem;
+  font-weight: 625;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.package-content .price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: auto;
+}
+
+.package-content p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+/* =========================
+   GRAD AVAILABILITY
+========================= */
+.grad-availability {
+  max-width: 1100px;
+  margin: 80px auto 60px;
+  text-align: center;
+}
+
+.grad-availability h2 {
+  font-size: 3rem;
+  color: #82B2C0;
+  letter-spacing: 0.06rem;
+  margin-top: -150px;
+  margin-bottom: 8px;
+}
+
+.availability-note {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #82B2C0;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.availability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.availability-card {
+  border: 5px solid #82B2C0;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.availability-card h3 {
+  font-size: 2rem;
+  color: #82B2C0;
+  margin-bottom: 15px;
+}
+
+.availability-card ul {
+  list-style: none;
+}
+
+.availability-card li {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 10px;
+  color: #82B2C0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* =========================
+   BOOKING CTA BUTTON
+========================= */
+.booking {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.cta-btn1 {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #F2EAE0;
+  background-color: #82B2C0;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.cta-btn1.availability,
+.cta-btn1:hover {
+  background-color: #006f71;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-main {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.contact-intro h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #82B2C0;
+}
+
+.contact-intro h3 {
+  font-size: 1.2rem;
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 0.6rem;
+  color: #82B2C0;
+}
+
+.contact-photo {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border: 6px solid #82B2C0;
+  margin-bottom: 0.5rem;
+  border-radius: 0;
+}
+
+.contact-card {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #F2EAE0;
+  border-radius: 35px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.02);
+}
+
+.contact-info p {
+  margin: 0.8rem 0;
+  font-size: 1.25rem;
+  color: #82B2C0;
+}
+
+.contact-info a {
+  color: #82B2C0;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #0055aa;
+}
+
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+========================= */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -1389,10 +685,6 @@ footer a:hover {
     font-size: 2rem;
   }
 
-  .package-grid {
-    grid-template-columns: 1fr;
-  }
-
   .freelance-logos {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -1403,30 +695,12 @@ footer a:hover {
   }
 }
 
-/* Small Screens (Mobile) */
 @media (max-width: 600px) {
-  .image-grid img,
-  .portfolio-grid img,
-  .category-card img,
-  .package-photos img,
-  .contact-photo,
-  .freelance-logos img {
-    height: auto;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
   .packages h2,
   .freelance-title,
   .sports-title,
   .hero-section h1 {
     font-size: 1.8rem;
-  }
-
-  .freelance-logos {
-    grid-template-columns: 1fr;
   }
 
   nav ul {
@@ -1444,23 +718,21 @@ footer a:hover {
     margin-top: 1rem;
   }
 
-  /* Slow carousel for mobile */
   .carousel {
     animation: scroll 90s linear infinite;
   }
 }
 
-/* Extra Small Screens */
 @media (max-width: 480px) {
-  .sport-card h2 {
-    font-size: 1.2rem;
-  }
-
   .packages h2,
   .freelance-title,
   .sports-title,
   .hero-section h1 {
     font-size: 1.6rem;
+  }
+
+  .sport-card h2 {
+    font-size: 1.2rem;
   }
 
   .package-photos {
