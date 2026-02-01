@@ -134,6 +134,14 @@ footer a:hover {
   cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
 /* =========================
    GALLERY SECTIONS - Portfolio
 ========================= */
@@ -157,14 +165,26 @@ footer a:hover {
 .Football h2,
 .Cross h2,
 .Other h2,
+.Concerts h2,
+.Freelance h2,
+.Engagement h2,
 .graphics-section h2,
 .graphics-gallery h2,
-.gallery-categories h2 {
+.gallery-categories h2,
+.NIL-container h1 {
   font-family: 'Fredoka One', cursive;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+
+.Concerts h3 {
+  font-family: "Optima", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .image-grid {
@@ -207,6 +227,13 @@ footer a:hover {
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.nil-lifestyle-page .category-card img {
+  height: 475px;
+  object-position: center 70%;
+}
+
+
 
 
 
@@ -298,6 +325,11 @@ footer a:hover {
 
 
 
+
+
+
+
+
 /* =========================
    SPORTS / GALLERIES PAGE
 ========================= */
@@ -384,6 +416,10 @@ footer a:hover {
     font-size: 1.5rem;
   }
 }
+
+
+
+
 
 
 
@@ -629,6 +665,13 @@ footer a:hover {
 }
 
 
+
+
+
+
+
+
+
 /* =========================
    PRICING PAGE – IMAGES LEFT, TEXT RIGHT WITH COLUMNS
 ========================= */
@@ -807,6 +850,79 @@ footer a:hover {
 
 
 
+
+
+
+
+/* =========================
+   SPORTS / GALLERIES PAGE
+========================= */
+
+.freelance-logos {
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.freelance-logos {
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* =========================
+   FREELANCE LOGOS
+========================= */
+
+.freelance-logos {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.freelance-logos h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logos-grid img {
+  max-height: 70px;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* =========================
    CONTACT PAGE
 ========================= */
@@ -878,6 +994,13 @@ footer a:hover {
   text-decoration: underline;
   color: #0055aa;
 }
+
+
+
+
+
+
+
 
 /* =========================
    RESPONSIVE MEDIA QUERIES
